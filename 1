@@ -1,0 +1,4 @@
+SELECT skytask.customers.company_name, skytask.employees.first_name || ' ' || skytask.employees.last_name FROM skytask.orders
+LEFT JOIN skytask.customers USING (customer_id)
+LEFT JOIN skytask.employees USING (employee_id)
+WHERE skytask.customers.city = 'London' and skytask.employees.city = 'London' and skytask.shippers.company_name = 'United Package'
