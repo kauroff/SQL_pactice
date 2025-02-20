@@ -1,0 +1,4 @@
+SELECT skytask.customers.company_name FROM skytask.customers
+LEFT JOIN skytask.orders USING(customer_id)
+WHERE skytask.orders.order_id IS NULL
+ORDER BY skytask.customers.company_name
