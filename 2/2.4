@@ -1,0 +1,3 @@
+SELECT DISTINCT skytask.products.product_name FROM skytask.products
+JOIN skytask.order_details USING (product_id)
+WHERE quantity = 10  
