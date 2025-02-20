@@ -1,0 +1,5 @@
+SELECT skytask.products.product_name, skytask.products.units_in_stock, skytask.suppliers.contact_name, skytask.suppliers.phone FROM skytask.products
+JOIN skytask.suppliers USING (supplier_id)
+JOIN skytask.categories USING (category_id)
+WHERE discontinued <> 1 AND units_in_stock < 25 AND category_name in ('Dairy Products', 'Condiments')
+ORDER BY units_in_stock
